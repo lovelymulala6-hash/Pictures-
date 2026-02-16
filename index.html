@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Picture Browser</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+    h1 {
+        margin-bottom: 10px;
+    }
+    #image-container {
+        margin-top: 20px;
+    }
+    img {
+        max-width: 90%;
+        max-height: 500px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #007BFF;
+        color: white;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<h1>Random Picture Browser</h1>
+<button onclick="generateImage()">Generate Random Picture</button>
+
+<div id="image-container">
+    <img id="randomImage" src="" alt="Your random image will appear here">
+</div>
+
+<script>
+function generateImage() {
+    const image = document.getElementById("randomImage");
+    const randomWidth = 600 + Math.floor(Math.random() * 200);
+    const randomHeight = 400 + Math.floor(Math.random() * 200);
+    image.src = `https://picsum.photos/${randomWidth}/${randomHeight}?random=${Math.random()}`;
+}
+
+// Load one image on page load
+generateImage();
+</script>
+
+</body>
+</html>
+
