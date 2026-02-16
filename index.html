@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Random Picture Browser</title>
 <style>
+    <link rel="stylesheet" href="style.css">
+    
     body {
         font-family: Arial, sans-serif;
         text-align: center;
@@ -61,4 +63,23 @@ generateImage();
 
 </body>
 </html>
+body {
+  background-color: #1a1a1a; /* Dark background */
+  color: #fff; /* White text */
+}
+
+button {
+  background-color: #4CAF50; /* Green button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+        img {
+  transition: transform 0.5s ease;
+}
+
+img:hover {
+  transform: scale(1.1); /* Zoom on hover */
+}
 
